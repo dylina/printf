@@ -7,7 +7,9 @@ CFLAGS = -Wall -Wextra -Werror
 OBJ = $(SRC:.c=.o)
 
 LIBC =	ft_printf.c\
-		ft_putchar.c
+		ft_puts.c\
+		ft_utilities.c\
+		ft_hex.c
 
 SRC = $(LIBC)
 
