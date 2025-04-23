@@ -6,11 +6,11 @@
 /*   By: dgorceac <dgorceac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 14:47:16 by dgorceac          #+#    #+#             */
-/*   Updated: 2025/04/22 12:34:55 by dgorceac         ###   ########.fr       */
+/*   Updated: 2025/04/23 15:42:31 by dgorceac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putchar(char c)
 {
@@ -23,6 +23,8 @@ int	ft_str_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
+	if (!s)
+		return (write(1, "(null)", 6));
 	if (s != NULL)
 	{
 		while (s[i])
