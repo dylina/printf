@@ -9,7 +9,8 @@ OBJ = $(SRC:.c=.o)
 LIBC =	ft_printf.c\
 		ft_puts.c\
 		ft_utilities.c\
-		ft_hex.c
+		ft_hex.c\
+		ft_hex_recursive.c
 
 SRC = $(LIBC)
 
