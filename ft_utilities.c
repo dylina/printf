@@ -6,11 +6,11 @@
 /*   By: dgorceac <dgorceac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 12:04:44 by dgorceac          #+#    #+#             */
-/*   Updated: 2025/04/22 15:12:20 by dgorceac         ###   ########.fr       */
+/*   Updated: 2025/04/23 16:31:59 by dgorceac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_nbr_fd(int n, int fd)
 {
@@ -38,13 +38,19 @@ int	ft_nbr_fd(int n, int fd)
 	i++;
 	return (i);
 }
+
 int	ft_unsigned(unsigned int n)
 {
+	int		count;
+	char	c;
+
+	count = 0;
 	if (n > 9)
 	{
-		ft_unsigned(n / 10);
-		ft_unsigned(n % 10);
+		count += ft_unsigned(n / 10);
 	}
-	else
-		ft_putchar(n + '0');
+	c = n % 10 + '0';
+	ft_putchar(c);
+	count++;
+	return (count);
 }
